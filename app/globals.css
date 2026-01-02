@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --brand-red: #e32227;
+  --brand-blue: #4169e1;
+  --text-dark: #1a1a1a;
+  --text-muted: #4b5563;
+}
+
+@layer base {
+  /* Use a more specific selector to force the font override */
+  html,
+  body {
+    font-family: var(--poppins-font), ui-sans-serif, system-ui, sans-serif !important;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    font-size: 10px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--catamaran-font), sans-serif !important;
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.1;
+  }
+
+  p {
+    /* Since we set body font above, p will inherit Poppins automatically */
+    color: var(--text-muted);
+  }
+
+  .section-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
