@@ -3,9 +3,6 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// 1. Load Catamaran (For Headings)
-// app/layout.tsx
-
 const catamaran = localFont({
   src: "./fonts/Catamaran-Black.ttf",
   variable: "--catamaran-font", // Matches globals.css
@@ -18,10 +15,19 @@ const poppins = localFont({
   display: "swap"
 });
 
+export const metadata = {
+  title: "ApiriHallowed Foundation (AHF)",
+  description:
+    "Restoring hope to orphans, inmates, patients and vulnerable communities through love and service.",
+  icons: { icon: "/favicon.png" }
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* Add the variables to the body tag */}
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className={`${catamaran.variable} ${poppins.variable} antialiased`}>
         <Navbar />
         {children}
