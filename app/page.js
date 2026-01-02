@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link"
 import { Heart, Globe, Utensils, Activity, Calendar, ArrowRight, Play, Star, Quote } from 'lucide-react';
 
 const CharityLandingPage = () => {
@@ -11,18 +12,15 @@ const CharityLandingPage = () => {
       <section className="flex flex-col items-center py-[50px] lg:py-[100px] bg-[#FDF9F1]">
         <div className="w-[90%] flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-[50%] mb-12 lg:mb-0">
-            <span className="text-[#E32227] font-bold uppercase tracking-widest text-[1.3rem]">Our Goal is Future</span>
+            <span className="text-[#E32227] font-bold uppercase text-[1.5rem]">RESTORING HOPE</span>
             <h1 className="text-[5rem] md:text-[5.5rem] font-extrabold mt-6 leading-[1.15]">
-              Believe in The Better <br/> Future of Others.
+            ApiriHallowed Foundation (AHF) 
             </h1>
-            <div className="mt-10 flex items-center">
-              <div className="w-[55px] h-[55px] bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 cursor-pointer hover:scale-110 transition-transform">
-                <Play fill="#E32227" className="text-[#E32227] ml-1" size={20} />
-              </div>
-              <div className="ml-5">
-                <p className="font-bold text-[1.8rem] text-gray-800 mb-[5px]">Join Our Upcoming Campaign</p>
-                <p className=" text-gray-400 text-[1.4rem]">Support the children's education today.</p>
-              </div>
+            <p className="font-bold text-[1.8rem] text-gray-800 my-[18px]">Restoring hope to orphans, inmates, patients and vulnerable communities through love and service.
+            </p>
+            <div className="flex font-bold">
+              <Link href="#" className="w-[180px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center mr-[20px]">Our Programs</Link>
+              <Link href="#" className="text-[#ffffff] w-[180px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center bg-[#4169e1] border-[#4169e1]">Donate Now</Link>
             </div>
           </div>
           <div className="w-full lg:w-[50%] relative flex justify-center lg:justify-end">
@@ -45,8 +43,8 @@ const CharityLandingPage = () => {
                      ))}
                   </div>
                   <div className="ml-4">
-                     <p className="text-[1.4rem] font-black text-[#4169e1]">25k+</p>
-                     <p className="text-[1.2rem] text-gray-400 font-bold uppercase tracking-tighter">Total Donors</p>
+                     <p className="text-[1.4rem] font-black text-[#4169e1]">500+</p>
+                     <p className="text-[1.2rem] text-gray-400 font-bold uppercase tracking-tighter">Orphans Supported</p>
                   </div>
                </div>
             </div>
@@ -88,10 +86,10 @@ const CharityLandingPage = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#4169e1] rounded-full opacity-5 -z-10 blur-3xl"></div>
           </div>
           <div className="w-full lg:w-[48%] lg:pl-10">
-            <span className="text-[#E32227] font-bold text-[1.4rem] uppercase tracking-widest">Welcome to Chariot</span>
+            <span className="text-[#E32227] font-bold text-[1.4rem] uppercase tracking-widest">Welcome to AHF</span>
             <h2 className="text-[4rem] font-bold mt-5 mb-8 leading-tight">You’re the Hope <br/> of Others.</h2>
             <p className="text-gray-500 text-[1.8rem] leading-relaxed mb-10">
-              Join us in our journey to make a difference. We provide long-term support for children and families facing hardship. Every donation contributes to education, water, and health.
+              Join us in our journey to make a difference. We provide support for children and families facing hardship. Every donation contributes to education, water, and health.
             </p>
             <div className="flex flex-row justify-between mb-10">
               <div className="w-[48%] border-l-4 border-[#4169e1] pl-5">
@@ -103,7 +101,7 @@ const CharityLandingPage = () => {
                 <p className="text-[1.6rem] text-[#000000] italic mt-2">Empowering the youth for a better tomorrow.</p>
               </div>
             </div>
-            <button className="bg-[#4169e1] text-white px-10 py-4 mt-[20px] rounded-full font-bold text-[1.5rem] uppercase tracking-widest hover:bg-[#E32227] transition-all">More About Us</button>
+            <Link href="/about/who-we-are" className="inline-block bg-[#4169e1] text-white px-10 py-4 mt-[20px] rounded-full font-bold text-[1.5rem] uppercase tracking-widest hover:bg-[#E32227] transition-all">More About Us</Link>
           </div>
         </div>
       </section>
@@ -118,41 +116,12 @@ const CharityLandingPage = () => {
                <img src={imgPath} className="w-full h-full object-cover" />
             </div>
             <div className="w-full lg:w-[55%] bg-[#000000] p-10 md:p-14 rounded-3xl text-white flex flex-col justify-center">
-               <h2 className="text-[#ffffff] text-[3.5rem] font-bold mb-6">Protecting The Safety and Rights of Children</h2>
-               <p className="text-[#ffffff] text-[1.5rem] mb-10 leading-relaxed">Dedicated to the prevention of abuse and the promotion of child health worldwide.</p>
-               <div className="w-full bg-white/20 h-2.5 rounded-full mb-3">
-                 <div className="w-[75%] h-full bg-[#E32227] rounded-full relative">
-                    <div className="absolute -top-7 right-0 text-[1.3rem] font-bold bg-white text-[#E32227] px-2 py-0.5 rounded">75%</div>
-                 </div>
-               </div>
-               <div className="flex justify-between text-[1.5rem] font-bold uppercase tracking-widest opacity-90">
-                 <span>Raised: $4,500</span>
-                 <span>Goal: $10,000</span>
-               </div>
+               <h2 className="text-[#ffffff] text-[3.5rem] font-bold mb-6">Protecting the Welfare and Future of Orphans</h2>
+               <p className="text-[#ffffff] text-[1.5rem] mb-10 ">Providing education, healthcare and welfare support to orphans and vulnerable children since 2009.</p>
+               
+               <p className="text-[#ffffff] text-[1.5rem] mb-10 "><span className="text-[1.5rem] bg-[#ffffff] text-[#E32227] rounded-[10px] p-[5px] font-bold mr-[10px]">500+</span>children supported</p>
+               <p className="text-[#ffffff] text-[1.5rem]"><span className="text-[1.5rem] bg-[#ffffff] text-[#E32227] rounded-[10px] p-[5px] font-bold mr-[10px]">TARGET</span>Reach more orphanage homes</p>
             </div>
-          </div>
-
-          {/* Secondary Campaign Cards */}
-          <div className="flex flex-col md:flex-row justify-between gap-8">
-            {[
-              {t: "The Bakery on Helping the Way", c: "#E32227", p: "65%"},
-              {t: "Changing a Lives One Meal at a time", c: "#4169e1", p: "85%"},
-              {t: "Join us in Community to Win Goals", c: "#1E8449", p: "40%"}
-            ].map((item, idx) => (
-              <div key={idx} className="w-full md:w-[31.5%] bg-white p-5 rounded-3xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-full h-[200px] rounded-2xl overflow-hidden mb-6">
-                  <img src={imgPath} className="w-full h-full object-cover" />
-                </div>
-                <h4 className="font-bold text-[2rem] mb-5 min-h-[50px]">{item.t}</h4>
-                <div className="w-full bg-gray-100 h-3 rounded-full mb-3">
-                  <div style={{width: item.p, backgroundColor: item.c}} className="h-full rounded-full"></div>
-                </div>
-                <div className="flex justify-between mt-[25px] text-[1.3rem] font-bold text-gray-400 uppercase">
-                  <span>Raised: $1,200</span>
-                  <span className="text-gray-900">Goal: $5,000</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -235,8 +204,8 @@ const CharityLandingPage = () => {
         <div className="w-[90%]">
           {/* Stats Sub-row */}
           <div className="flex flex-wrap flex-row justify-between border-b border-white/10 pb-20 mb-20">
-             {[ {n: '12k+', t: 'Projects'}, {n: '64m+', t: 'Donations'}, {n: '2k+', t: 'Volunteers'}, {n: '120+', t: 'Countries'} ].map((stat, idx) => (
-               <div key={idx} className="w-[50%] md:w-[20%] text-center mb-10 md:mb-0 border-r last:border-0 border-white/10">
+             {[ {n: '500+', t: 'Orphans Supported'}, {n: '200+', t: 'Inmates Trained and Empowered'}, {n: '1000+', t: 'Medical Beneficiaries'}, {n: '10+', t: 'Communities Reached'} ].map((stat, idx) => (
+               <div key={idx} className="w-[50%] md:w-[20%] text-center mb-10 md:mb-0 ">
                  <h2 className="text-4xl md:text-[4rem] font-black text-[#4169e1] mb-2">{stat.n}</h2>
                  <p className="text-[1.5rem] text-gray-500 uppercase tracking-[0.2em] font-bold">{stat.t}</p>
                </div>
@@ -304,8 +273,6 @@ const CharityLandingPage = () => {
         </div>
       </section>
       {/* END BLOG */}
-
-      
     </div>
   );
 };

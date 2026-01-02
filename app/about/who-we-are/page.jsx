@@ -32,9 +32,11 @@ const page = () => {
           founded by Mr. Apiriala Atedoghu, who is also the President of the
           NGO. The NGO was established in the Federal Capital Territory (FCT),
           Abuja and was registered under the Corporate Affairs Commission (CAC)
-          on February 8, 2008, with registration Number CAC/IT/
-          N026765.ApiriHallowed Foundation began its first operation in General
-          Hospital Kubwa, Abuja on June 3, 2007, and subsequently continued her
+          on February 8, 2008, with registration Number CAC/IT/ N026765.
+          <br />
+          <br />
+          ApiriHallowed Foundation began its first operation in General Hospital
+          Kubwa, Abuja on June 3, 2007, and subsequently continued her
           operations to the hospital monthly. The NGO opened a branch Office in
           Warri at No. 10 Market Road Jeddo, Warri, Delta State in the year
           2009, and was made the Corporate Headquarters on the 4th of January

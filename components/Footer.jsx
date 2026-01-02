@@ -6,8 +6,9 @@ const Footer = () => {
   return (
     <>
       <footer className="flex flex-col items-center bg-[#07090C] text-white pt-24 pb-12">
-        <div className="w-[90%] text-[1.3rem] flex flex-col md:flex-row justify-between border-b border-white/10 pb-20 gap-16">
-          <div className="w-full md:w-[30%]">
+        <div className="w-[90%] text-[1.3rem] flex flex-col md:flex-row justify-between border-b border-white/10 pb-20 gap-8">
+          {/* Logo + Mission */}
+          <div className="w-full md:w-[24%]">
             <Image
               src="/images/logo.png"
               height={100}
@@ -31,44 +32,84 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="w-full md:w-[15%] text-[1.3rem]">
-            <h4 className="font-bold uppercase tracking-[0.3em] mb-8 text-[#E32227]">
+
+          {/* Quick Links */}
+          <div className="w-full md:w-[24%]">
+            <h4 className="font-bold uppercase mb-8 text-[#E32227]">
               Quick Links
             </h4>
             <ul className="text-gray-500 space-y-5 font-bold uppercase tracking-widest">
-              <li className="hover:text-white cursor-pointer">About Us</li>
-              <li className="hover:text-white cursor-pointer">Our Campaign</li>
-              <li className="hover:text-white cursor-pointer">
-                Upcoming Events
-              </li>
-              <li className="hover:text-white cursor-pointer">Admin Panel</li>
+              <li className="hover:text-white cursor-pointer">Video</li>
+              <li className="hover:text-white cursor-pointer">Podcast</li>
+              <li className="hover:text-white cursor-pointer">Publications</li>
+              <li className="hover:text-white cursor-pointer">e-Newsletter</li>
+              <li className="hover:text-white cursor-pointer">Report Cases</li>
             </ul>
           </div>
-          <div className="w-full md:w-[15%]">
-            <h4 className="font-bold  uppercase tracking-[0.3em] mb-8 text-[#4169e1]">
-              Support
-            </h4>
-            <ul className="text-gray-500 space-y-5 font-bold uppercase tracking-widest">
-              <li className="hover:text-white cursor-pointer">
-                Privacy Policy
+
+          {/* Offices */}
+          <div className="w-full md:w-[24%]">
+            <h4 className="font-bold uppercase mb-8 text-[#4169e1]">Offices</h4>
+            <ul className="text-gray-500 space-y-5 font-bold tracking-normal">
+              <li>
+                <span className="text-white">Head Quarters:</span>
+                <br />
+                10 Market Road, Jeddo, Okpe LGA, Delta State, Nigeria
               </li>
-              <li className="hover:text-white cursor-pointer">Terms of Use</li>
-              <li className="hover:text-white cursor-pointer">Help Center</li>
+              <li>
+                <span className="text-white">Branch Office:</span>
+                <br />
+                B47, Anglican Plaza, Uselu by Mela Road, Opp. Egor LGA
+                Secretariat, Ugbowo, Benin City, Edo State, Nigeria
+              </li>
             </ul>
           </div>
-          <div className="w-full md:w-[25%]">
-            <h4 className="font-bold uppercase tracking-[0.3em] mb-8 text-[#4169e1]">
+
+          {/* Contact Info + Small Form */}
+          <div className="w-full md:w-[24%]">
+            <h4 className="font-bold uppercase  mb-8 text-[#4169e1]">
               Contact Info
             </h4>
-            <p className="text-gray-500 mb-4">123 Charity Lane, New York, NY</p>
-            <p className="text-white font-bold mb-4">+1 (234) 567 890</p>
-            <p className="text-[#4169e1] font-bold">contact@chariot.org</p>
+            <ul className="text-gray-500 space-y-3 tracking-normal mb-6">
+              <li className="text-white">+234-8074054834</li>
+              <li className="text-white">+234-8053204802</li>
+              <li className="text-white">+234-8069316588</li>
+            </ul>
+
+            {/* Small Form */}
+            <form className="flex flex-col gap-3 text-black">
+              <h3 className="text-[#E32227] text-[1.5rem] my-[10px]">
+                SEND US A MESSAGE
+              </h3>
+              <input
+                type="text"
+                placeholder="First Name"
+                className="p-5 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#E32227]"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="p-5 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#E32227]"
+              />
+              <textarea
+                placeholder="Message"
+                rows="3"
+                className="p-5 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#E32227]"
+              ></textarea>
+              <button
+                type="submit"
+                className="bg-[#E32227] text-white font-bold py-5 px-4 rounded-md hover:bg-[#c71c21] transition-colors"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
-        <div className="w-[90%] pt-10 flex flex-col md:flex-row justify-between items-center text-gray-600 font-black uppercase tracking-[0.4em]">
-          <p>© 2024 CHARIOT FOUNDATION. ALL RIGHTS RESERVED.</p>
+
+        {/* Bottom Bar */}
+        <div className="w-[90%] pt-10 flex flex-col md:flex-row justify-between items-center text-gray-600 font-black uppercase tracking-[0.4em] mt-16">
+          <p>© 2026 AHF. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8 mt-6 md:mt-0">
-            <span>Sitemap</span>
             <span>Cookies</span>
           </div>
         </div>
