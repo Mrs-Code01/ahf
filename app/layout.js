@@ -19,15 +19,12 @@ export const metadata = {
   title: "ApiriHallowed Foundation (AHF)",
   description:
     "Restoring hope to orphans, inmates, patients and vulnerable communities through love and service.",
-  icons: { icon: "/favicon.png" }
+  icons: { icon: "/favicon.ico" }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" />
-      </head>
       <body className={`${catamaran.variable} ${poppins.variable} antialiased`}>
         <Navbar />
         {children}
