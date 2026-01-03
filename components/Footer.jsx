@@ -1,6 +1,7 @@
 import React from "react";
 import { Globe } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -39,11 +40,24 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="text-gray-500 space-y-5 font-bold uppercase tracking-widest">
-              <li className="hover:text-white cursor-pointer">Video</li>
-              <li className="hover:text-white cursor-pointer">Podcast</li>
-              <li className="hover:text-white cursor-pointer">Publications</li>
-              <li className="hover:text-white cursor-pointer">e-Newsletter</li>
-              <li className="hover:text-white cursor-pointer">Report Cases</li>
+              <Link href="#">
+                <li className="hover:text-white cursor-pointer">
+                  e-Newsletter
+                </li>
+              </Link>
+              <Link href="#">
+                <li className="hover:text-white cursor-pointer">
+                  e-Newsletter
+                </li>
+              </Link>
+              <Link href="#">
+                <li className="hover:text-white cursor-pointer">
+                  e-Newsletter
+                </li>
+              </Link>
+              <Link href="/admin/login">
+                <li className="hover:text-white cursor-pointer">Admin Panel</li>
+              </Link>
             </ul>
           </div>
 

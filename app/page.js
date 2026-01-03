@@ -126,7 +126,76 @@ const CharityLandingPage = () => {
         </div>
       </section>
       {/* END CAMPAIGN SECTION */}
+      {/* END CAMPAIGN SECTION */}
+      <section className="w-[90%] my-[100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+        {/* Left Content Side */}
+        <div className="w-full lg:w-[50%] flex flex-col gap-6">
+          <h2 className="text-[3.5rem] md:text-[5rem] font-bold leading-[1.2] text-gray-900">
+            Start <span className="text-[#E32227]">Learning </span> 
+            A Skill From Experts
+          </h2>
+          
+          <p className="text-gray-600 text-[1.8rem] max-w-[500px]">
+            Pick from our online video courses with new additions published every month.
+          </p>
 
+          <div className="mt-4">
+            <Link href="#" className="inline-block bg-[#4169e1] text-white px-10 py-4 mt-[20px] rounded-full font-bold text-[1.5rem] uppercase tracking-widest hover:bg-[#E32227] transition-all">
+              Start Course
+            </Link>
+          </div>
+        </div>
+        {/* End Left Content Side */}
+
+        {/* Right Image Side */}
+        <div className="w-full lg:w-[45%] relative flex justify-center items-center">
+          
+          {/* Background Decorative Box */}
+          <div className="absolute top-4 right-4 w-full h-[350px] md:h-[500px] border-[10px] border-[#4169e1] opacity-20 -z-10 rounded-lg max-[1130px]:h-[400px]"></div>
+
+          <div className="relative w-full h-[350px] md:h-[500px] bg-[#89CFF0] rounded-lg overflow-visible flex items-end justify-center max-[1130px]:h-[400px]">
+            {/* Main Instructor Image */}
+            <img 
+              src="/images/ahfnig1.jpg" 
+              alt="Instructor" 
+              className="w-full h-full object-cover rounded-lg"
+            />
+
+            {/* Floating Card: Stats (Top Left) */}
+            <div className="absolute top-20 -left-10 bg-white p-4 shadow-xl rounded-lg flex items-center gap-3 hidden md:flex">
+              <div className="w-10 h-10 bg-red-100 rounded flex items-center justify-center">
+                <img src="/images/ahfnig1.jpg" className="w-6 h-6 rounded-full" alt="icon" />
+              </div>
+              <div>
+                <p className="text-xl font-bold text-gray-800">8,90,000+</p>
+                <p className="text-xs text-gray-500">Free Courses</p>
+              </div>
+            </div>
+
+            {/* Floating Card: Graph (Bottom Right) */}
+            <div className="absolute bottom-10 -right-10 bg-white p-5 shadow-xl rounded-lg hidden md:block w-[180px]">
+              <p className="text-sm font-bold text-gray-800 mb-2">Students Enroll</p>
+              {/* Simple Flex-based Bar Chart Representation */}
+              <div className="flex items-end gap-2 h-16 mb-2">
+                <div className="w-3 h-8 bg-[#E32227] rounded-sm"></div>
+                <div className="w-3 h-14 bg-[#E32227] rounded-sm"></div>
+                <div className="w-3 h-6 bg-[#E32227] rounded-sm"></div>
+                <div className="w-3 h-10 bg-[#E32227] rounded-sm"></div>
+                <div className="w-3 h-12 bg-[#E32227] rounded-sm"></div>
+              </div>
+              <p className="text-[10px] text-gray-400">100% this last month</p>
+            </div>
+
+            {/* Graduation Cap Icon */}
+            <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-8 h-8 bg-[#4169e1] rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs">🎓</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        {/* End Right Image Side */}
+      </section>
       {/* 5. DONATION ICON GRID */}
       <section className="flex flex-col items-center py-28">
         <div className="w-[90%] text-center">

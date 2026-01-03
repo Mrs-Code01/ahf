@@ -71,7 +71,7 @@ const navItems = [
   },
   { label: "News", href: "/news" },
   { label: "Media", href: "/media" },
-  { label: "Courses", href: "/courses/our-courses" }
+  { label: "Courses", href: "/courses/start-course" }
 ];
 
 export default function CharityLandingPage() {
