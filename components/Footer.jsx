@@ -68,7 +68,7 @@ const Footer = () => {
               <li>
                 <span className="text-white">Head Quarters:</span>
                 <br />
-                10 Market Road, Jeddo, Okpe LGA, Delta State, Nigeria.
+                10 Market Road, Jeddo, Okpe LGA, Delta State, Nigeria...
               </li>
               <li>
                 <span className="text-white">Branch Office:</span>
