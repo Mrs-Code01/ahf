@@ -43,8 +43,10 @@ export default function CoursesPage() {
     return (
       <div className="flex justify-center items-center min-h-screen bg-gray-50">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 font-semibold">Loading courses...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600 font-semibold text-[1.5rem]">
+            Loading courses...
+          </p>
         </div>
       </div>
     );
@@ -53,9 +55,9 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <div className="bg-[black] text-white pt-[80px] pb-[50px]">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">📚 Our Courses</h1>
+          <h1 className="text-5xl text-[#ffffff] mb-4">📚 Our Courses</h1>
           <p className="text-xl text-blue-100">
             Discover and enroll in our expert-led courses
           </p>
@@ -77,7 +79,7 @@ export default function CoursesPage() {
                 placeholder="Search courses..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
 
@@ -90,7 +92,7 @@ export default function CoursesPage() {
               <select
                 value={selectedCategory}
                 onChange={e => setSelectedCategory(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 appearance-none"
               >
                 {categories.map(cat => (
                   <option key={cat} value={cat}>

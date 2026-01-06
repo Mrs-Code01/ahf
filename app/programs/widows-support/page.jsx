@@ -47,7 +47,7 @@ const page = () => {
           width={200}
           height={200}
           alt="brush stroke"
-          className="w-[30%]"
+          className="w-[350px]"
           unoptimized
         />
       </section>
@@ -55,7 +55,7 @@ const page = () => {
       {/* End of header */}
       <section className="w-[90%] mx-auto mb-[100px]">
         {/* Intro Section */}
-        <div className="w-[50%] mx-auto text-center mb-12">
+        <div className="w-[50%] mx-auto text-center mb-12 max-[800px]:w-[100%]">
           <h4 className="text-[#E32227] uppercase tracking-widest text-[1.3rem] font-bold mb-2">
             Our Focus Areas
           </h4>

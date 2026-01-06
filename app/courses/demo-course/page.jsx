@@ -7,10 +7,10 @@ const page = () => {
 
   // Array of Objects for Topics
   const topicData = [
-    { id: 1, title: "Art & Design", count: "3 Courses", icon: "🎨" },
-    { id: 2, title: "Audio & Music", count: "2 Courses", icon: "🎤" },
-    { id: 3, title: "Recycling", count: "1 Courses", icon: "♻️" },
-    { id: 4, title: "Development", count: "10 Courses", icon: "💻" }
+    { id: 1, title: "Art & Design", icon: "🎨" },
+    { id: 2, title: "Audio & Music", icon: "🎤" },
+    { id: 3, title: "Recycling", icon: "♻️" },
+    { id: 4, title: "Development", icon: "💻" }
   ];
 
   // Array of Objects for Featured Courses
@@ -29,7 +29,7 @@ const page = () => {
     },
     {
       id: 3,
-      tag: "$19.00",
+      tag: "Free",
       cat: "Marketing",
       title: "Social media marketing masterclass."
     }
@@ -38,14 +38,13 @@ const page = () => {
   return (
     <div className="w-full flex flex-col items-center bg-white overflow-x-hidden">
       {/* SECTION 1: HERO SECTION (White Skill Section) */}
-      <section className="w-[90%] py-20 flex flex-row max-[1130px]:flex-col items-center justify-between gap-10">
-        <div className="w-[50%] max-[1130px]:w-full flex flex-col items-start gap-6">
-          <h1 className="text-[64px] max-[1130px]:text-[42px] font-black text-slate-900 leading-[1.1]">
+      <section className="w-[90%] mx-auto py-[120px] flex max-[800px]:flex-col items-center justify-between gap-10">
+        <div className="w-[50%] max-[800px]:w-full flex flex-col items-start gap-6">
+          <h1 className="text-[5rem] max-[800px]:text-[4rem] max-[500px]:text-[3.5rem] font-black text-slate-900 leading-[1.1] ">
             Learn a New Skill <br />
-            Everyday, Anytime, <br />
-            and Anywhere.
+            Everyday, Anytime, and Anywhere.
           </h1>
-          <p className="text-gray-500 text-[1.8rem] leading-relaxed w-[90%]">
+          <p className="text-gray-500 text-[1.8rem] leading-relaxed w-[90%] max-[700px]:text-[1.5rem]">
             1000+ Courses covering all tech domains for you to learn and explore
             new opportunities. Learn from Industry Experts and land your Dream
             Job.
@@ -83,7 +82,7 @@ const page = () => {
         </div>
 
         {/* Hero Visual Area */}
-        <div className="w-[45%] max-[1130px]:w-full flex justify-center relative">
+        <div className="w-[45%] max-[800px]:w-full flex justify-center relative">
           <div className="w-[500px] h-[500px] max-[600px]:w-full max-[600px]:h-auto relative">
             <img
               src={mainImg}
@@ -104,9 +103,9 @@ const page = () => {
       {/* END HERO SECTION */}
 
       {/* SECTION 2: EXPERT SKILLS / ABOUT SECTION */}
-      <section className="w-[90%] py-24 flex flex-row max-[1130px]:flex-col items-center justify-between bg-white">
-        <div className="w-[45%] max-[1130px]:w-full flex justify-center relative">
-          <div className="w-[100%] h-[500px] max-[1130px]:h-[400px] relative">
+      <section className="w-[90%] py-24 flex max-[800px]:flex-col items-center justify-between bg-white gap-y-[60px]">
+        <div className="w-[45%] max-[800px]:w-full flex justify-center relative">
+          <div className="w-[100%] h-[500px] max-[800px]:h-[400px] relative">
             <img
               src={mainImg}
               alt="Expert Learner"
@@ -123,17 +122,17 @@ const page = () => {
           </div>
         </div>
 
-        <div className="w-[50%] max-[1130px]:w-full flex flex-col gap-6">
+        <div className="w-[50%] max-[800px]:w-full flex flex-col gap-6">
           <p
             style={{ color: primaryBlue }}
-            className="font-bold uppercase text-[1.3rem] tracking-[4px]"
+            className="font-bold uppercase text-[1.3rem] tracking-[6px]"
           >
             Top Courses From Experts
           </p>
-          <h2 className="text-[3.5rem] max-[600px]:text-3xl font-black text-slate-900">
+          <h2 className="text-[3rem] max-[700px]:text-[2.5rem]">
             Learn New Skills to Go Ahead for Better Future
           </h2>
-          <p className="text-[1.8rem]">
+          <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
             Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio nec
             nibh luctus, behind the word mountains far from.
           </p>
@@ -175,7 +174,7 @@ const page = () => {
       {/* END EXPERT SKILLS SECTION */}
 
       {/* SECTION 3: TOP COURSE TOPICS */}
-      <section className="w-[90%] py-24 flex flex-col items-center bg-[#f8fafc] rounded-[60px]">
+      <section className="w-[90%] py-[40px] px-[15px] flex flex-col items-center bg-[#f8fafc] rounded-[60px]">
         <div className="flex flex-col items-center text-center mb-16">
           <p
             style={{ color: primaryRed }}
@@ -183,7 +182,7 @@ const page = () => {
           >
             Course Topics
           </p>
-          <h2 className="text-[3.5rem] font-black text-slate-900">
+          <h2 className="text-[3.5rem] max-[700px]:text-[3rem]">
             Checkout Our Course Topics
           </h2>
           <div className="w-20 h-1.5 bg-red-500 mt-4 rounded-full"></div>
@@ -198,16 +197,13 @@ const page = () => {
               <div className="w-[100px] h-[100px] bg-gray-50 rounded-2xl flex items-center justify-center text-[4rem] mb-6 group-hover:bg-red-50 transition-colors">
                 {topic.icon}
               </div>
-              <h4 className="font-bold text-[2.5rem] text-slate-800">
+              <h4 className="font-bold text-[2.5rem] max-[700px]:text-[2rem]">
                 {topic.title}
               </h4>
-              <p className="text-gray-400 font-medium mt-1 text-[1.5rem]">
-                {topic.count}
-              </p>
             </div>
           ))}
         </div>
-        <p className="text-[1.5rem] mt-[100px] font-medium">
+        <p className="text-[1.5rem] mt-[60px] font-medium text-center px-[20px]">
           Interested to view all of our course?{" "}
           <span
             style={{ color: primaryBlue }}
@@ -224,11 +220,11 @@ const page = () => {
         <div className="flex flex-col items-center text-center mb-16">
           <p
             style={{ color: primaryBlue }}
-            className="font-black uppercase text-[1.5rem] tracking-[6px] mb-4"
+            className="font-black uppercase text-[1.3rem] tracking-[6px] mb-4"
           >
             Top Courses From Experts
           </p>
-          <h2 className="text-[3.5rem] font-black text-slate-900">
+          <h2 className="text-[3.5rem] max-[700px]:text-[3rem]">
             Our Featured Courses
           </h2>
           <div className="w-20 h-1.5 bg-blue-600 mt-4 rounded-full"></div>

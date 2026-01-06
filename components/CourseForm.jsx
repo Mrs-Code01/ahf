@@ -43,13 +43,13 @@ export default function CourseForm({ course, onSave, onCancel }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
       <div className="bg-white rounded-xl max-w-3xl w-full my-8 shadow-2xl">
-        <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 flex justify-between items-center rounded-t-xl">
-          <h2 className="text-2xl font-bold">
+        <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-[#ffffff] px-6 py-4 flex justify-between items-center rounded-t-xl">
+          <h2 className="text-2xl font-bold text-[#ffffff] ">
             {course ? "✏️ Edit Course" : "➕ Create New Course"}
           </h2>
           <button
             onClick={onCancel}
-            className="hover:bg-white hover:bg-opacity-20 p-2 rounded-lg transition-colors"
+            className="hover:bg-white hover:text-[#000000] p-2 rounded-lg transition-colors"
           >
             <X size={24} />
           </button>

@@ -1,37 +1,37 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ShoppingCart, Check, Building2, Mail, Copy } from 'lucide-react';
+import { useState } from "react";
+import { ShoppingCart, Check, Building2, Mail, Copy } from "lucide-react";
 
 export default function PurchaseButton({ course }) {
   const [showForm, setShowForm] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [copied, setCopied] = useState('');
+  const [copied, setCopied] = useState("");
   const [formData, setFormData] = useState({
-    userName: '',
-    userEmail: '',
-    paymentMethod: 'bank_transfer',
-    transactionReference: '',
+    userName: "",
+    userEmail: "",
+    paymentMethod: "bank_transfer",
+    transactionReference: ""
   });
 
   // ⚠️ CHANGE THESE TO YOUR ACTUAL PAYMENT DETAILS!
-  const BANK_NAME = "First Bank of Nigeria";
-  const ACCOUNT_NUMBER = "1234567890";
-  const ACCOUNT_NAME = "Your School Name";
-  const PAYMENT_EMAIL = "payments@yourschool.com";
+  const BANK_NAME = "Guarantee Trust Bank (GTB)";
+  const ACCOUNT_NUMBER = "0024260939";
+  const ACCOUNT_NAME = "APIRI HALLOWED FOUNDATION";
+  const PAYMENT_EMAIL = "apirihallowedfoundation2017@yahoo.com";
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await fetch('/api/courses/purchase', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/courses/purchase", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
-          courseId: course.id,
-        }),
+          courseId: course.id
+        })
       });
 
       const data = await response.json();
@@ -40,16 +40,16 @@ export default function PurchaseButton({ course }) {
         alert(data.message);
         setShowForm(false);
         setFormData({
-          userName: '',
-          userEmail: '',
-          paymentMethod: 'bank_transfer',
-          transactionReference: '',
+          userName: "",
+          userEmail: "",
+          paymentMethod: "bank_transfer",
+          transactionReference: ""
         });
       } else {
         alert(data.error);
       }
     } catch (error) {
-      alert('Error submitting purchase');
+      alert("Error submitting purchase");
       console.error(error);
     } finally {
       setLoading(false);
@@ -59,7 +59,7 @@ export default function PurchaseButton({ course }) {
   const copyToClipboard = (text, field) => {
     navigator.clipboard.writeText(text);
     setCopied(field);
-    setTimeout(() => setCopied(''), 2000);
+    setTimeout(() => setCopied(""), 2000);
   };
 
   if (!showForm) {
@@ -84,17 +84,17 @@ export default function PurchaseButton({ course }) {
           <Building2 className="text-green-700" size={24} />
           <h4 className="font-bold text-green-900 text-lg">Payment Details</h4>
         </div>
-        
+
         <div className="space-y-3">
           <div>
             <p className="text-xs text-green-700 font-medium">BANK NAME</p>
             <div className="flex items-center justify-between bg-white rounded-md px-3 py-2 mt-1">
               <p className="font-semibold text-gray-800">{BANK_NAME}</p>
               <button
-                onClick={() => copyToClipboard(BANK_NAME, 'bank')}
+                onClick={() => copyToClipboard(BANK_NAME, "bank")}
                 className="text-green-600 hover:text-green-700 p-1"
               >
-                {copied === 'bank' ? <Check size={16} /> : <Copy size={16} />}
+                {copied === "bank" ? <Check size={16} /> : <Copy size={16} />}
               </button>
             </div>
           </div>
@@ -102,12 +102,18 @@ export default function PurchaseButton({ course }) {
           <div>
             <p className="text-xs text-green-700 font-medium">ACCOUNT NUMBER</p>
             <div className="flex items-center justify-between bg-white rounded-md px-3 py-2 mt-1">
-              <p className="font-bold text-gray-800 text-lg">{ACCOUNT_NUMBER}</p>
+              <p className="font-bold text-gray-800 text-lg">
+                {ACCOUNT_NUMBER}
+              </p>
               <button
-                onClick={() => copyToClipboard(ACCOUNT_NUMBER, 'account')}
+                onClick={() => copyToClipboard(ACCOUNT_NUMBER, "account")}
                 className="text-green-600 hover:text-green-700 p-1"
               >
-                {copied === 'account' ? <Check size={16} /> : <Copy size={16} />}
+                {copied === "account" ? (
+                  <Check size={16} />
+                ) : (
+                  <Copy size={16} />
+                )}
               </button>
             </div>
           </div>
@@ -117,10 +123,10 @@ export default function PurchaseButton({ course }) {
             <div className="flex items-center justify-between bg-white rounded-md px-3 py-2 mt-1">
               <p className="font-semibold text-gray-800">{ACCOUNT_NAME}</p>
               <button
-                onClick={() => copyToClipboard(ACCOUNT_NAME, 'name')}
+                onClick={() => copyToClipboard(ACCOUNT_NAME, "name")}
                 className="text-green-600 hover:text-green-700 p-1"
               >
-                {copied === 'name' ? <Check size={16} /> : <Copy size={16} />}
+                {copied === "name" ? <Check size={16} /> : <Copy size={16} />}
               </button>
             </div>
           </div>
@@ -128,7 +134,9 @@ export default function PurchaseButton({ course }) {
           <div>
             <p className="text-xs text-green-700 font-medium">AMOUNT TO PAY</p>
             <div className="bg-white rounded-md px-3 py-2 mt-1">
-              <p className="font-bold text-green-700 text-2xl">{course.price}</p>
+              <p className="font-bold text-green-700 text-2xl">
+                {course.price}
+              </p>
             </div>
           </div>
         </div>
@@ -138,32 +146,40 @@ export default function PurchaseButton({ course }) {
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
         <div className="flex items-center gap-2 mb-2">
           <Mail className="text-blue-700" size={20} />
-          <h4 className="font-semibold text-blue-900">Send Payment Proof To:</h4>
+          <h4 className="font-semibold text-blue-900">
+            Send Payment Proof To:
+          </h4>
         </div>
         <div className="flex items-center justify-between bg-white rounded-md px-3 py-2">
-          <a 
+          <a
             href={`mailto:${PAYMENT_EMAIL}`}
             className="text-blue-600 hover:text-blue-700 font-semibold"
           >
             {PAYMENT_EMAIL}
           </a>
           <button
-            onClick={() => copyToClipboard(PAYMENT_EMAIL, 'email')}
+            onClick={() => copyToClipboard(PAYMENT_EMAIL, "email")}
             className="text-blue-600 hover:text-blue-700 p-1"
           >
-            {copied === 'email' ? <Check size={16} /> : <Copy size={16} />}
+            {copied === "email" ? <Check size={16} /> : <Copy size={16} />}
           </button>
         </div>
       </div>
 
       {/* PAYMENT INSTRUCTIONS */}
       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-        <h4 className="font-semibold text-yellow-900 mb-2">📋 Payment Instructions:</h4>
+        <h4 className="font-semibold text-yellow-900 mb-2">
+          📋 Payment Instructions:
+        </h4>
         <ol className="text-sm text-yellow-800 space-y-2 list-decimal list-inside">
-          <li>Transfer <strong>{course.price}</strong> to the account above</li>
+          <li>
+            Transfer <strong>{course.price}</strong> to the account above
+          </li>
           <li>Take a screenshot of your payment receipt</li>
           <li>Fill the form below with your details</li>
-          <li>Email your payment proof to: <strong>{PAYMENT_EMAIL}</strong></li>
+          <li>
+            Email your payment proof to: <strong>{PAYMENT_EMAIL}</strong>
+          </li>
           <li>Admin will verify within 24 hours and grant access</li>
         </ol>
       </div>
@@ -178,7 +194,9 @@ export default function PurchaseButton({ course }) {
             type="text"
             required
             value={formData.userName}
-            onChange={(e) => setFormData({ ...formData, userName: e.target.value })}
+            onChange={e =>
+              setFormData({ ...formData, userName: e.target.value })
+            }
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="John Doe"
           />
@@ -192,7 +210,9 @@ export default function PurchaseButton({ course }) {
             type="email"
             required
             value={formData.userEmail}
-            onChange={(e) => setFormData({ ...formData, userEmail: e.target.value })}
+            onChange={e =>
+              setFormData({ ...formData, userEmail: e.target.value })
+            }
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="john@example.com"
           />
@@ -207,7 +227,9 @@ export default function PurchaseButton({ course }) {
           </label>
           <select
             value={formData.paymentMethod}
-            onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
+            onChange={e =>
+              setFormData({ ...formData, paymentMethod: e.target.value })
+            }
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="bank_transfer">Bank Transfer</option>
@@ -224,7 +246,9 @@ export default function PurchaseButton({ course }) {
           <input
             type="text"
             value={formData.transactionReference}
-            onChange={(e) => setFormData({ ...formData, transactionReference: e.target.value })}
+            onChange={e =>
+              setFormData({ ...formData, transactionReference: e.target.value })
+            }
             placeholder="e.g., TXN123456789"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -239,7 +263,9 @@ export default function PurchaseButton({ course }) {
             disabled={loading}
             className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold disabled:opacity-50 flex items-center justify-center gap-2"
           >
-            {loading ? 'Processing...' : (
+            {loading ? (
+              "Processing..."
+            ) : (
               <>
                 <Check size={20} />
                 Submit Purchase

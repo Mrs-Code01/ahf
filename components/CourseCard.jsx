@@ -9,7 +9,7 @@ export default function CourseCard({ course, onEdit, onDelete, isAdmin }) {
         <img
           src={course.image}
           alt={course.title}
-          className="w-full h-48 object-cover"
+          className="w-full h-[200px] object-cover"
         />
         <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-medium">
           {course.category}

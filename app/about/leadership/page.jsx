@@ -44,13 +44,13 @@ const page = () => {
           width={200}
           height={200}
           alt="brush stroke"
-          className="w-[30%]"
+          className="w-[350px]"
           unoptimized
         />
       </section>
       {/* End of header */}
       {/* End of header */}
-      <div className="w-[30%] mx-auto mb-[100px]">
+      <div className="w-[30%] mx-auto mb-[100px] max-[800px]:w-[90%]">
         <p className="text-[1.5rem] text-center">
           The management team oversees program execution, partnerships,
           compliance, and daily operations to ensure effectiveness and
@@ -58,7 +58,7 @@ const page = () => {
         </p>
       </div>
       <section className="w-[90%] mx-auto py-20 bg-white">
-        <div className="w-[60%] mx-auto mb-[70px] text-center">
+        <div className="w-[60%] mx-auto mb-[70px] text-center max-[700px]:w-[100%]">
           <h2 className="text-[3rem] text-center mb-[20px]">
             Board of Trustees
           </h2>
@@ -100,7 +100,7 @@ const page = () => {
       {/* Board of Trustees */}
       {/* Board of Trustees */}
       <section className="w-[90%] mx-auto py-20 bg-white">
-        <div className="w-[60%] mx-auto mb-[70px] text-center">
+        <div className="w-[60%] mx-auto mb-[70px] text-center max-[700px]:w-[100%]">
           <h2 className="text-[3rem] text-center mb-[20px]">
             Board of Directors
           </h2>

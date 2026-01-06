@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+      <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-[320px] w-full">
         <div className="flex justify-center mb-6">
           <div className="bg-blue-100 p-5 rounded-full">
             <Lock className="text-blue-600" size={40} />
@@ -120,18 +120,9 @@ export default function AdminLoginPage() {
             disabled={loading}
             className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
           >
-            {loading ? "🔄 Signing in..." : "🔐 Sign In"}
+            {loading ? "🔄 Signing in..." : "Sign In"}
           </button>
         </form>
-
-        <div className="mt-8 pt-6 border-t text-center">
-          <p className="text-sm text-gray-500">
-            🔒 Protected area - Admin access only
-          </p>
-          <p className="text-xs text-gray-400 mt-2">
-            Default: admin@myschool.com / admin123
-          </p>
-        </div>
       </div>
     </div>
   );

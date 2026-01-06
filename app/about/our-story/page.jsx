@@ -16,15 +16,17 @@ const page = () => {
           width={200}
           height={200}
           alt="brush stroke"
-          className="w-[30%]"
+          className="w-[350px]"
           unoptimized
         />
       </section>
       {/* End of header */}
       {/* End of header */}
       <div className="w-[90%] mx-auto mb-[100px] text-center">
-        <h2 className="text-[3rem] mb-[10px]">OUR STORY</h2>
-        <p className="text-[1.8rem]">
+        <h2 className="text-[3rem] mb-[10px] max-[700px]:text-[2.5rem]">
+          OUR STORY
+        </h2>
+        <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
           ApiriHallowed Foundation (AHF) was born out of a deep concern for
           people who are often forgotten by society — orphans, widows, inmates,
           the sick and vulnerable communities. <br />
@@ -58,7 +60,7 @@ const page = () => {
           width={200}
           height={200}
           alt="founder"
-          className="w-[22%] p-[5px] mx-auto my-[20px] h-[300px] rounded-[10px] object-cover object-top"
+          className="w-[22%] p-[5px] mx-auto my-[20px] h-[300px] rounded-[10px] object-cover object-top max-[900px]:w-[40%] max-[600px]:w-[70%] max-[400px]:w-[90%]"
           unoptimized
         />
         <h3 className="text-[1.8rem] text-[#0A4D3C]">Mr. Apiriala Atedoghu</h3>

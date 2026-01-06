@@ -2,7 +2,7 @@ import React from "react";
 
 const Programs = ({ programs }) => {
   return (
-    <div className="flex flex-wrap justify-between">
+    <div className="flex flex-wrap justify-between gap-y-[40px]">
       {programs.map(program => (
         <div
           key={program.id}

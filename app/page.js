@@ -9,22 +9,22 @@ const CharityLandingPage = () => {
     <div className="bg-white text-gray-900 overflow-x-hidden">
       
       {/* 1. HERO SECTION - Exact layout with rounded overlapping circles */}
-      <section className="flex flex-col items-center py-[50px] lg:py-[100px] bg-[#FDF9F1]">
-        <div className="w-[90%] flex flex-col lg:flex-row items-center">
-          <div className="w-full lg:w-[50%] mb-12 lg:mb-0">
+      <section className="flex flex-col items-center py-[150px] lg:py-[100px] bg-[#FDF9F1]">
+        <div className="w-[90%] flex flex-col lg:flex-row items-center ">
+          <div className="w-full lg:w-[50%] mb-12 lg:mb-0 max-[1020px]:pb-[60px]">
             <span className="text-[#E32227] font-bold uppercase text-[1.5rem]">RESTORING HOPE</span>
-            <h1 className="text-[5rem] md:text-[5.5rem] font-extrabold mt-6 leading-[1.15]">
+            <h1 className="text-[4rem] md:text-[5.5rem] font-extrabold mt-6 leading-[1.15]">
             ApiriHallowed Foundation (AHF) 
             </h1>
-            <p className="font-bold text-[1.8rem] text-gray-800 my-[18px]">Restoring hope to orphans, inmates, patients and vulnerable communities through love and service.
+            <p className="text-[1.8rem] text-gray-800 my-[18px] max-[700px]:text-[1.5rem]">Restoring hope to orphans, inmates, patients and vulnerable communities through love and service.
             </p>
-            <div className="flex font-bold">
-              <Link href="#" className="w-[180px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center mr-[20px]">Our Programs</Link>
-              <Link href="#" className="text-[#ffffff] w-[180px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center bg-[#4169e1] border-[#4169e1]">Donate Now</Link>
+            <div className="flex ">
+              <Link href="#" className="w-[160px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center mr-[20px] max-[700px]:text-[1.5rem]">Our Programs</Link>
+              <Link href="#" className="text-[#ffffff] w-[160px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center bg-[#4169e1] border-[#4169e1] max-[700px]:text-[1.5rem]">Donate Now</Link>
             </div>
           </div>
           <div className="w-full lg:w-[50%] relative flex justify-center lg:justify-end">
-            <div className="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px]">
+            <div className="relative w-[400px] h-[330px] md:w-[450px] md:h-[450px]">
                {/* Main Circle Image */}
                <div className="w-full h-full rounded-full overflow-hidden border-[12px] border-white shadow-2xl">
                   <img src={imgPath} className="w-full h-full object-cover" alt="Hero" />
@@ -55,7 +55,7 @@ const CharityLandingPage = () => {
 
       {/* 2. TOP FEATURES BAR */}
       <section className="flex flex-col items-center mt-[100px]">
-        <div className="w-[90%] flex flex-col md:flex-row justify-between gap-4">
+        <div className="w-[90%] flex flex-col md:flex-row justify-between gap-y-[30px]">
           <div className="w-full md:w-[32%] bg-[#4169e1] p-[20px] rounded-2xl text-white flex flex-row items-center shadow-lg">
             <div className="w-[70px] h-[70px] bg-white/20 rounded-xl flex items-center justify-center mr-5"><Globe size={30}/></div>
             <div><h3 className="font-bold text-[2.5rem]">Mission Led</h3><p className="text-[1.6rem] text-[#ffffff]">Empowering children worldwide.</p></div>
@@ -87,21 +87,21 @@ const CharityLandingPage = () => {
           </div>
           <div className="w-full lg:w-[48%] lg:pl-10">
             <span className="text-[#E32227] font-bold text-[1.4rem] uppercase tracking-widest">Welcome to AHF</span>
-            <h2 className="text-[4rem] font-bold mt-5 mb-8 leading-tight">You’re the Hope <br/> of Others.</h2>
-            <p className="text-gray-500 text-[1.8rem] leading-relaxed mb-10">
+            <h2 className="text-[4rem] mt-5 mb-8 leading-[1.2] max-[700px]:text-[3rem]">You’re the Hope of Others.</h2>
+            <p className="text-gray-500 text-[1.8rem] mb-10 max-[700px]:text-[1.5rem]">
               Join us in our journey to make a difference. We provide support for children and families facing hardship. Every donation contributes to education, water, and health.
             </p>
             <div className="flex flex-row justify-between mb-10">
               <div className="w-[48%] border-l-4 border-[#4169e1] pl-5">
                 <h4 className="font-bold text-[#4169e1] text-[1.3rem]">Our Mission</h4>
-                <p className="text-[1.6rem] text-[#000000] italic mt-2">Sustainable growth for local communities.</p>
+                <p className="text-[1.6rem] text-[#000000] italic mt-2 max-[700px]:text-[1.4rem]">Sustainable growth for local communities.</p>
               </div>
               <div className="w-[48%] border-l-4 border-[#E32227] pl-5">
                 <h4 className="font-bold text-[#E32227] text-[1.3rem]">Our Vision</h4>
-                <p className="text-[1.6rem] text-[#000000] italic mt-2">Empowering the youth for a better tomorrow.</p>
+                <p className="text-[1.6rem] text-[#000000] italic mt-2 max-[700px]:text-[1.4rem]">Empowering the youth for a better tomorrow.</p>
               </div>
             </div>
-            <Link href="/about/who-we-are" className="inline-block bg-[#4169e1] text-white px-10 py-4 mt-[20px] rounded-full font-bold text-[1.5rem] uppercase tracking-widest hover:bg-[#E32227] transition-all">More About Us</Link>
+            <Link href="/about/who-we-are" className="inline-block bg-[#4169e1] text-white px-10 py-4 mt-[20px] rounded-full font-bold text-[1.5rem] uppercase tracking-widest hover:bg-[#E32227] transition-all max-[700px]:text-[1.4rem]">More About Us</Link>
           </div>
         </div>
       </section>
@@ -116,8 +116,8 @@ const CharityLandingPage = () => {
                <img src={imgPath} className="w-full h-full object-cover" />
             </div>
             <div className="w-full lg:w-[55%] bg-[#000000] p-10 md:p-14 rounded-3xl text-white flex flex-col justify-center">
-               <h2 className="text-[#ffffff] text-[3.5rem] font-bold mb-6">Protecting the Welfare and Future of Orphans</h2>
-               <p className="text-[#ffffff] text-[1.5rem] mb-10 ">Providing education, healthcare and welfare support to orphans and vulnerable children since 2009.</p>
+               <h2 className="text-[#ffffff] text-[3.5rem] mb-6 max-[700px]:text-[3rem]">Protecting the Welfare and Future of Orphans</h2>
+               <p className="text-[#ffffff] text-[1.5rem] mb-10">Providing education, healthcare and welfare support to orphans and vulnerable children since 2009.</p>
                
                <p className="text-[#ffffff] text-[1.5rem] mb-10 "><span className="text-[1.5rem] bg-[#ffffff] text-[#E32227] rounded-[10px] p-[5px] font-bold mr-[10px]">500+</span>children supported</p>
                <p className="text-[#ffffff] text-[1.5rem]"><span className="text-[1.5rem] bg-[#ffffff] text-[#E32227] rounded-[10px] p-[5px] font-bold mr-[10px]">TARGET</span>Reach more orphanage homes</p>
@@ -127,19 +127,19 @@ const CharityLandingPage = () => {
       </section>
       {/* END CAMPAIGN SECTION */}
       {/* END CAMPAIGN SECTION */}
-      <section className="w-[90%] my-[100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+      <section className="w-[90%] my-[100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-y-[70px]">
         {/* Left Content Side */}
-        <div className="w-full lg:w-[50%] flex flex-col gap-6">
-          <h2 className="text-[3.5rem] md:text-[5rem] font-bold leading-[1.2] text-gray-900">
+        <div className="w-full lg:w-[50%] flex flex-col">
+          <h2 className="text-[3.5rem] md:text-[5rem] leading-[1.2] text-gray-900 max-[700px]:text-[3rem]">
             Start <span className="text-[#E32227]">Learning </span> 
             A Skill From Experts
           </h2>
           
-          <p className="text-gray-600 text-[1.8rem] max-w-[500px]">
+          <p className="text-gray-600 text-[1.8rem] max-w-[500px] max-[700px]:text-[1.5rem] mt-[10px]">
             Pick from our online video courses with new additions published every month.
           </p>
 
-          <div className="mt-4">
+          <div>
             <Link href="#" className="inline-block bg-[#4169e1] text-white px-10 py-4 mt-[20px] rounded-full font-bold text-[1.5rem] uppercase tracking-widest hover:bg-[#E32227] transition-all">
               Start Course
             </Link>
@@ -173,7 +173,7 @@ const CharityLandingPage = () => {
             </div>
 
             {/* Floating Card: Graph (Bottom Right) */}
-            <div className="absolute bottom-10 -right-10 bg-white p-5 shadow-xl rounded-lg hidden md:block w-[180px]">
+            <div className="absolute bottom-10 -right-10 bg-white p-5 shadow-xl rounded-lg md:block w-[180px]">
               <p className="text-sm font-bold text-gray-800 mb-2">Students Enroll</p>
               {/* Simple Flex-based Bar Chart Representation */}
               <div className="flex items-end gap-2 h-16 mb-2">
@@ -200,7 +200,7 @@ const CharityLandingPage = () => {
       <section className="flex flex-col items-center py-28">
         <div className="w-[90%] text-center">
           <span className="text-[#E32227] font-bold text-[1.5rem] uppercase tracking-widest">How We Help</span>
-          <h2 className="text-[3.5rem] font-black mt-4 mb-20 uppercase tracking-tighter">Your Donation Means <br/> Another Smile.</h2>
+          <h2 className="text-[3.5rem] font-black mt-4 mb-20 uppercase max-[700px]:text-[3rem]">Your Donation Means Another Smile.</h2>
           
           <div className="flex flex-wrap flex-row justify-between gap-y-16">
             {[
@@ -227,7 +227,7 @@ const CharityLandingPage = () => {
         <div className="w-[90%] bg-[#0A4D3C] rounded-[40px] p-16 text-center text-white relative overflow-hidden">
           <div className="relative z-10">
             <p className="uppercase text-[1.3rem] tracking-[0.3em] font-bold mb-6 text-white/70">How to help with us</p>
-            <h2 className="text-[3.5rem] md:text-[4rem] font-bold mb-10 leading-tight text-[#ffffff]">Your donation means a lot for them. <br/> Donate what you can.</h2>
+            <h2 className="text-[3rem] md:text-[4rem] font-bold mb-10 leading-[1.2] text-[#ffffff]">Your donation means a lot for them. <br/> Donate what you can.</h2>
             <button className="bg-[#E32227] text-white px-12 py-5 rounded-full font-black text-[1.5rem] uppercase tracking-widest hover:scale-105 transition-transform shadow-xl">Donate Now</button>
           </div>
           {/* Decorative faint patterns */}
@@ -274,9 +274,9 @@ const CharityLandingPage = () => {
           {/* Stats Sub-row */}
           <div className="flex flex-wrap flex-row justify-between border-b border-white/10 pb-20 mb-20">
              {[ {n: '500+', t: 'Orphans Supported'}, {n: '200+', t: 'Inmates Trained and Empowered'}, {n: '1000+', t: 'Medical Beneficiaries'}, {n: '10+', t: 'Communities Reached'} ].map((stat, idx) => (
-               <div key={idx} className="w-[50%] md:w-[20%] text-center mb-10 md:mb-0 ">
-                 <h2 className="text-4xl md:text-[4rem] font-black text-[#4169e1] mb-2">{stat.n}</h2>
-                 <p className="text-[1.5rem] text-gray-500 uppercase tracking-[0.2em] font-bold">{stat.t}</p>
+               <div key={idx} className="w-[47%] md:w-[20%] text-center mb-10 md:mb-0 ">
+                 <h2 className="text-[3.5rem] md:text-[4rem] font-black text-[#4169e1] mb-2">{stat.n}</h2>
+                 <p className="text-[1.5rem] text-gray-500 uppercase font-bold max-[700px]:text-[1.2rem]">{stat.t}</p>
                </div>
              ))}
           </div>
@@ -304,44 +304,6 @@ const CharityLandingPage = () => {
         </div>
       </section>
       {/* END TESTIMONIALS */}
-
-      {/* 9. PHOTO GALLERY STRIP */}
-      <section className="flex flex-row h-[220px] max-[1130px]:h-[160px] overflow-hidden">
-         {[1,2,3,4,5,6].map(i => (
-           <div key={i} className="w-[16.66%] h-full flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-700 cursor-zoom-in">
-              <img src={imgPath} className="w-full h-full object-cover" />
-           </div>
-         ))}
-      </section>
-      {/* END GALLERY */}
-
-      {/* 10. BLOG/NEWS SECTION */}
-      <section className="flex flex-col items-center py-28">
-        <div className="w-[90%]">
-          <div className="text-center mb-16">
-             <span className="text-[#4169e1] font-bold text-[1.3rem] uppercase tracking-widest">Our Latest News</span>
-             <h2 className="text-[3.5rem] font-black mt-4 uppercase tracking-tighter">News & Articles</h2>
-          </div>
-          <div className="flex flex-col md:flex-row justify-between gap-10">
-            {[1, 2, 3].map(i => (
-              <div key={i} className="w-full md:w-[31.5%] group">
-                <div className="w-full h-[200px ] rounded-[40px] overflow-hidden mb-8 shadow-md">
-                   <img src={imgPath} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="flex flex-row items-center gap-6 text-[10px] font-black uppercase text-gray-400 mb-4 tracking-widest">
-                   <span className="text-var(--text-muted) text-[1.3rem]">By Admin</span>
-                 
-                </div>
-                <h4 className="text-[2.5rem] font-bold  group-hover:text-[#4169e1] transition-colors mb-6">How better give that is worth help in your community.</h4>
-                <button className="flex flex-row items-center text-[1.3rem] font-black uppercase text-[#4169e1]">
-                   Read More <ArrowRight size={14} className="ml-3" />
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* END BLOG */}
     </div>
   );
 };

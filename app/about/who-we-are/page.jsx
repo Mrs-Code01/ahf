@@ -16,17 +16,17 @@ const page = () => {
           width={200}
           height={200}
           alt="brush stroke"
-          className="w-[30%]"
+          className="w-[350px]"
           unoptimized
         />
       </section>
       {/* End of header */}
       {/* End of header */}
       <div className="w-[90%] mx-auto mb-[70px] text-center">
-        <h2 className="text-[3rem] mb-[10px]">
+        <h2 className="text-[3rem] mb-[10px] max-[700px]:text-[2.5rem]">
           HISTORY AND ESTABLISHMENT OF THE NGO
         </h2>
-        <p className="text-[1.8rem]">
+        <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
           ApiriHallowed Foundation was established on June 3rd 2007,{" "}
           <i>inspired by the word of God in Matthew 25: 31  46.</i> It was
           founded by Mr. Apiriala Atedoghu, who is also the President of the
@@ -45,28 +45,30 @@ const page = () => {
           Corporate Headquarters.
         </p>
       </div>
-      <div className="flex justify-between mb-[70px] w-[90%] mx-auto">
+      <div className="flex justify-between flex-wrap mb-[70px] w-[90%] mx-auto gap-y-[30px]">
         <Image
           src="/images/ahfnig1.jpg"
           width={200}
           height={200}
           alt="Our vision"
-          className="w-[47%] h-[300px] object-cover"
+          className="w-[47%] h-[300px] object-cover max-[700px]:w-[100%]"
         />
-        <div className="w-[47%]">
-          <h2 className="text-[3rem] mb-[10px]">VISION STATEMENT OF THE NGO</h2>
-          <p className="text-[1.8rem]">
+        <div className="w-[47%] max-[700px]:w-[100%]">
+          <h2 className="text-[3rem] mb-[10px] max-[700px]:text-[2.5rem]">
+            VISION STATEMENT OF THE NGO
+          </h2>
+          <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
             Improved well-being of Humanity amongst the Poor and needy in the
             society as assigned by God.
           </p>
         </div>
       </div>
-      <div className="flex justify-between mb-[70px] w-[90%] mx-auto">
-        <div className="w-[47%]">
-          <h2 className="text-[3rem] mb-[10px]">
+      <div className="flex justify-between flex-wrap mb-[70px] w-[90%] mx-auto gap-y-[30px] max-[700px]:flex-col-reverse">
+        <div className="w-[47%] max-[700px]:w-[100%]">
+          <h2 className="text-[3rem] mb-[10px] max-[700px]:text-[2.5rem]">
             MISSION STATEMENT OF THE NGO
           </h2>
-          <p className="text-[1.8rem]">
+          <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
             Restore hope to the impoverished, Prison inmates and Hospital
             patients, through the giving of arms and the message of love.
           </p>
@@ -76,13 +78,15 @@ const page = () => {
           width={200}
           height={200}
           alt="Our mission"
-          className="w-[47%] h-[300px] object-cover"
+          className="w-[47%] h-[300px] object-cover max-[700px]:w-[100%]"
         />
       </div>
       <div className="w-[100%] py-[70px] bg-[#eeeeee]">
         <div className="w-[60%] mx-auto text-center">
-          <h2 className="mb-[10px] text-[3rem]">CORE MANDATES</h2>
-          <p className="text-[1.8rem]">
+          <h2 className="mb-[10px] text-[3rem] max-[700px]:text-[2.5rem]">
+            CORE MANDATES
+          </h2>
+          <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
             ApiriHallowed Foundation (AHF) has her core mandate targeted at the
             Hospitalized, Orphans and Vulnerable Children, Widows, the Prison
             inmates, Medical Outreaches and Community Development.
@@ -93,12 +97,14 @@ const page = () => {
       {/* goals beginning */}
       {/* goals beginning */}
       <div className="my-[70px] w-[90%] mx-auto">
-        <h2 className="mb-[20px] text-[3rem]">
+        <h2 className="mb-[20px] text-[3rem] max-[700px]:text-[2.5rem]">
           GOALS / OBJECTIVES OF APIRIHALLOWED FOUNDATION (AHF)
         </h2>
         <div className="mb-[30px]">
-          <h3 className="mb-[10px] text-[2.5rem]">A. GOALS</h3>
-          <p className="text-[1.8rem]">
+          <h3 className="mb-[10px] text-[2.5rem] max-[700px]:text-[2rem]">
+            A. GOALS
+          </h3>
+          <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
             <span className="text-[30px] mr-[10px]">&bull;</span>
             Alleviate or eradicate the rate at which Orphans and Vulnerable
             <br />
@@ -119,8 +125,10 @@ const page = () => {
         </div>
         {/* End of goals */}
         <div className="mb-[30px]">
-          <h3 className="mb-[10px] text-[2.5rem]">B. OBJECTIVES</h3>
-          <p className="text-[1.8rem]">
+          <h3 className="mb-[10px] text-[2.5rem] max-[700px]:text-[2rem]">
+            B. OBJECTIVES
+          </h3>
+          <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
             <span className="text-[30px] mr-[10px]">&bull;</span>
             To provide scholarship schemes for Orphans from Primary to
             University level and free eye tests and treatment to be conducted
@@ -142,17 +150,19 @@ const page = () => {
       {/* End of objectives */}
       <div className="w-[90%] mb-[70px] mx-auto">
         <div className="w-[60%] mx-auto text-center">
-          <h2 className="text-[3rem]">VALUES FOR EXCELLENCE</h2>
-          <p className="text-[1.8rem]">
+          <h2 className="text-[3rem] max-[700px]:text-[2.5rem]">
+            VALUES FOR EXCELLENCE
+          </h2>
+          <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
             All project / programme personnel of AHF shall possess and maintain
             the following values for excellent performance.
           </p>
         </div>
-        <p className="w-[60%] mx-auto text-[2.5rem] font-[700] my-[30px]  p-[50px] bg-[#e32227] text-center text-[#ffffff]">
+        <p className="w-[60%] max-[700px]:w-[100%] mx-auto text-[2.5rem] font-[700] my-[30px]  p-[50px] bg-[#e32227] text-center text-[#ffffff] max-[700px]:text-[2rem]">
           Love, Discipline, Accountability, Honesty, Integrity, Sincerity and
           Transparency
         </p>
-        <p className="text-[1.8rem]">
+        <p className="text-[1.8rem] max-[700px]:text-[1.5rem]">
           <span className="text-[30px] mr-[10px]">&bull;</span>
           All Project / Programme personnel of AHF shall promote love,
           discipline, accountability, Honesty, Integrity, Sincerity and

@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SocialSideBar from "../components/SocialSideBar";
 
 const catamaran = localFont({
   src: "./fonts/Catamaran-Black.ttf",
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${catamaran.variable} ${poppins.variable} antialiased`}>
-        <SocialSideBar />
         <Navbar />
         {children}
         <Footer />

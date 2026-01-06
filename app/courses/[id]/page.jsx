@@ -88,12 +88,12 @@ export default function CourseDetailPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+      <div className="bg-[#000000] text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
           <span className="inline-block bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-semibold mb-4">
             {course.category}
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#ffffff]">
             {course.title}
           </h1>
           <p className="text-xl text-blue-100 mb-6">{course.description}</p>
