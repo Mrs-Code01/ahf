@@ -69,7 +69,6 @@ const navItems = [
       }
     ]
   },
-  { label: "News", href: "/news" },
   { label: "Media", href: "/media" },
   { label: "Courses", href: "/courses/start-course" }
 ];

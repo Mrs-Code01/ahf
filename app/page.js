@@ -1,9 +1,13 @@
-import React from 'react';
+"use client"
+
+import React, {useState} from 'react';
 import Link from "next/link"
-import { Heart, Globe, Utensils, Activity, Calendar, ArrowRight, Play, Star, Quote } from 'lucide-react';
+import { Heart, Globe, Utensils, Activity, Calendar, Star, Quote } from 'lucide-react';
+import DonationModal from "../components/DonateModal"
 
 const CharityLandingPage = () => {
   const imgPath = "/images/ahfnig1.jpg";
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="bg-white text-gray-900 overflow-x-hidden">
@@ -20,7 +24,7 @@ const CharityLandingPage = () => {
             </p>
             <div className="flex ">
               <Link href="#" className="w-[160px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center mr-[20px] max-[700px]:text-[1.5rem]">Our Programs</Link>
-              <Link href="#" className="text-[#ffffff] w-[160px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center bg-[#4169e1] border-[#4169e1] max-[700px]:text-[1.5rem]">Donate Now</Link>
+              <Link href="#" className="text-[#ffffff] w-[160px] py-[10px] block text-[1.8rem] rounded-[10px] border-[1px] text-center bg-[#4169e1] border-[#4169e1] max-[700px]:text-[1.5rem]" onClick={() => setShowModal(true)}>Donate Now</Link>
             </div>
           </div>
           <div className="w-full lg:w-[50%] relative flex justify-center lg:justify-end">
@@ -228,13 +232,16 @@ const CharityLandingPage = () => {
           <div className="relative z-10">
             <p className="uppercase text-[1.3rem] tracking-[0.3em] font-bold mb-6 text-white/70">How to help with us</p>
             <h2 className="text-[3rem] md:text-[4rem] font-bold mb-10 leading-[1.2] text-[#ffffff]">Your donation means a lot for them. <br/> Donate what you can.</h2>
-            <button className="bg-[#E32227] text-white px-12 py-5 rounded-full font-black text-[1.5rem] uppercase tracking-widest hover:scale-105 transition-transform shadow-xl">Donate Now</button>
+            <button className="bg-[#E32227] text-white px-12 py-5 rounded-full font-black text-[1.5rem] uppercase tracking-widest hover:scale-105 transition-transform shadow-xl cursor-pointer" onClick={() => setShowModal(true)}>Donate Now</button>
           </div>
           {/* Decorative faint patterns */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20"></div>
           <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full -ml-10 -mb-10"></div>
         </div>
       </section>
+      {showModal && (
+        <DonationModal onClose={() => setShowModal(false)} />
+      )}
       {/* END CTA STRIP */}
 
       {/* 7. EVENTS SECTION */}
