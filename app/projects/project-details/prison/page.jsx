@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import DonationModal from "@components/ModalPopUp/Donate";
-import VolunteerModal from "@components/ModalPopUp/Volunteer";
+import DonationModal from "../../../../components/ModalPopUp/Donate";
+import VolunteerModal from "../../../../components/ModalPopUp/Volunteer";
 import {
   ArrowLeft,
   Calendar,

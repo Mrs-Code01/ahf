@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CourseCard from "@/components/CourseCard";
+import CourseCard from "../../components/CourseCard";
 import { Search, Filter, BookOpen } from "lucide-react";
 
 export default function CoursesPage() {

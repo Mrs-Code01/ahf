@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import DonationModal from "@components/ModalPopUp/Donate";
-import VolunteerModal from "@components/ModalPopUp/Volunteer";
+import DonationModal from "../../../../components/ModalPopUp/Donate";
+import VolunteerModal from "../../../../components/ModalPopUp/Volunteer";
 import { ArrowLeft, Heart, CheckCircle2, Award, FileText } from "lucide-react";
 
 const FullProjectDetailsPage = () => {
@@ -24,7 +24,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Holistic Welfare",
       date: "April 18, 2009",
       category: "Social Welfare",
-      image: "/images/liberty2009.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Holistic Welfare",
         "Educational Support",
@@ -41,7 +41,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Regional Outreach",
       date: "May 4, 2010",
       category: "Social Welfare",
-      image: "/images/liberty2010.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Inter-state Coordination",
         "Social Integration",
@@ -58,7 +58,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Roll Back Malaria",
       date: "July 16, 2011",
       category: "Healthcare",
-      image: "/images/liberty2011.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Malaria Prevention",
         "Medical Screening",
@@ -75,7 +75,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Eye Clinic 2012",
       date: "September 15, 2012",
       category: "Healthcare",
-      image: "/images/liberty2012.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Visual Screening",
         "Corrective Treatment",
@@ -92,7 +92,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Vision Follow-up",
       date: "October 15, 2013",
       category: "Healthcare",
-      image: "/images/liberty2013.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Patient Reassessment",
         "Specialized Treatment",
@@ -109,7 +109,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Eye Outreach 2014",
       date: "August 4, 2014",
       category: "Healthcare",
-      image: "/images/liberty2014.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Community Health",
         "Vision Correction",
@@ -126,7 +126,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Vision Maintenance",
       date: "December 5, 2015",
       category: "Healthcare",
-      image: "/images/liberty2015.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Visual Stability",
         "Prescription Update",
@@ -143,7 +143,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Comprehensive Care",
       date: "December 16, 2017",
       category: "Healthcare",
-      image: "/images/liberty2017.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: ["Visual Health", "Psychosocial Fun", "Holiday Outreach"],
       lead: "AHF Welfare Unit",
       fullReport: [
@@ -156,7 +156,7 @@ const FullProjectDetailsPage = () => {
       title: "Liberty for Orphans: Benin City Eye Clinic",
       date: "December 1, 2018",
       category: "Healthcare",
-      image: "/images/liberty2018.jpg",
+      image: "/images/ahfnig1.jpg",
       objectives: [
         "Critical Case Follow-up",
         "Expanded Access",

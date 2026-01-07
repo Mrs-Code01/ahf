@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import PurchaseButton from "@/components/PurchaseButton";
+import PurchaseButton from "../../../components/PurchaseButton";
 import { Clock, Users, BookOpen, CheckCircle, ArrowLeft } from "lucide-react";
 
 export default function CourseDetailPage() {

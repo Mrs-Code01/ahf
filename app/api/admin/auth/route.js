@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { verifyAdminCredentials, generateToken } from "@/lib/auth";
+import { verifyAdminCredentials, generateToken } from "../../../../lib/auth";
 
 export async function POST(request) {
   try {

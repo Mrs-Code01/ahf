@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/supabase";
-import { isAdmin } from "@/lib/auth";
+import { db } from "../../../lib/supabase";
+import { isAdmin } from "../../../lib/auth";
 
 // GET enrollments
 export async function GET(request) {
