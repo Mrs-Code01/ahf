@@ -43,32 +43,7 @@ const navItems = [
       }
     ]
   },
-  {
-    label: "Projects",
-    href: "/projects",
-    dropdown: [
-      {
-        label: "Orphans & Vulnerable Children (OVC)",
-        href: "/projects/orphans-and-vulnerable-children"
-      },
-      {
-        label: "Prison Reform & Skill Acquisition",
-        href: "/projects/prison-reform-and-skill-acquisition"
-      },
-      {
-        label: "Hospital & Medical Outreach",
-        href: "/projects/hospital-medical-outreach"
-      },
-      {
-        label: "Widows Support",
-        href: "/projects/widows-support"
-      },
-      {
-        label: "Community Development",
-        href: "/projects/community-development"
-      }
-    ]
-  },
+  { label: "Projects", href: "/projects" },
   { label: "Media", href: "/media" },
   { label: "Courses", href: "/courses/start-course" }
 ];
@@ -250,7 +225,7 @@ export default function CharityLandingPage() {
                 href="/contact"
                 className="bg-[#4169e1] text-white px-6 py-2.5 rounded-full text-[1.3rem] font-bold hover:bg-[#E32227] transition-colors"
               >
-                Contact
+                Donate
               </Link>
             </div>
 
