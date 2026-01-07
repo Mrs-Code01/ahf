@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom"; // Import createPortal
 import { User, Mail, Phone, MessageSquare, X, Send } from "lucide-react";
 
 const VolunteerModal = ({ onClose }) => {
@@ -11,9 +12,16 @@ const VolunteerModal = ({ onClose }) => {
     message: ""
   });
 
+  // Immediate Scroll Lock and Body Check
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   const handleSubmit = e => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Volunteer Data:", formData);
     alert("Thank you for signing up!");
     onClose();
@@ -23,16 +31,16 @@ const VolunteerModal = ({ onClose }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  return (
-    <div className="fixed inset-0 z-[500px] flex items-center justify-center p-4">
-      {/* Backdrop */}
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+      {/* Optimized Backdrop */}
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300"
+        className="absolute inset-0 bg-black/60 backdrop-blur-[2px] animate-in fade-in duration-200"
         onClick={onClose}
       />
 
       {/* Modal Content */}
-      <div className="relative w-full max-w-[480px] bg-white rounded-[28px] p-6 md:p-10 shadow-2xl animate-in zoom-in duration-300 overflow-y-auto max-h-[95vh]">
+      <div className="relative w-full max-w-[480px] bg-white rounded-[28px] p-6 md:p-10 shadow-2xl animate-in zoom-in-95 fade-in duration-200 will-change-transform overflow-y-auto max-h-[95vh]">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -57,7 +65,6 @@ const VolunteerModal = ({ onClose }) => {
 
         {/* Form Section */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name Field */}
           <div className="relative">
             <label className="text-[10px] uppercase tracking-[0.1em] text-gray-400 font-black mb-1.5 block ml-1">
               Full Name
@@ -80,7 +87,6 @@ const VolunteerModal = ({ onClose }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Email Field */}
             <div className="relative">
               <label className="text-[10px] uppercase tracking-[0.1em] text-gray-400 font-black mb-1.5 block ml-1">
                 Email Address
@@ -102,7 +108,6 @@ const VolunteerModal = ({ onClose }) => {
               </div>
             </div>
 
-            {/* Phone Field */}
             <div className="relative">
               <label className="text-[10px] uppercase tracking-[0.1em] text-gray-400 font-black mb-1.5 block ml-1">
                 Phone Number
@@ -125,7 +130,6 @@ const VolunteerModal = ({ onClose }) => {
             </div>
           </div>
 
-          {/* Message Field */}
           <div className="relative">
             <label className="text-[10px] uppercase tracking-[0.1em] text-gray-400 font-black mb-1.5 block ml-1">
               Why do you want to join?
@@ -147,7 +151,6 @@ const VolunteerModal = ({ onClose }) => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="cursor-pointer w-full bg-[#E32227] hover:bg-[#c11b21] text-white font-bold py-4 rounded-xl shadow-lg shadow-red-500/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2 mt-2"
@@ -163,7 +166,8 @@ const VolunteerModal = ({ onClose }) => {
           </p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body // Portal target
   );
 };
 

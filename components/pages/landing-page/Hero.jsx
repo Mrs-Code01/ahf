@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
-import DonationModal from "../../../components/ModalPopUp/Donate";
+import DonateModal from "../../../components/ModalPopUp/Donate";
 
 const bgImages = [
   "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000",
@@ -14,6 +14,12 @@ const bgImages = [
 const Hero = () => {
   const [current, setCurrent] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  // Run once on load to enable modals
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const nextSlide = () => {
     setCurrent(prev => (prev === bgImages.length - 1 ? 0 : prev + 1));
@@ -51,7 +57,7 @@ const Hero = () => {
       ))}
 
       {/* Static Content */}
-      <div className="relative z-20 h-full w-[90%] mx-auto flex flex-col justify-center">
+      <div className="relative z-50 h-full w-[90%] mx-auto flex flex-col justify-center">
         <div className="w-[70%] space-y-6 max-[700px]:text-center max-[700px]:w-[100%]">
           <span className="inline-block px-5 py-[10px] bg-[#000000] text-white text-[1.2rem] tracking-[5px] font-black uppercase rounded-sm">
             Matthew 25:31-46
@@ -86,17 +92,19 @@ const Hero = () => {
           <div className="flex flex-wrap gap-5 pt-10">
             <button
               onClick={() => setShowModal(true)}
-              className="bg-red-600 hover:bg-red-700 text-white px-12 py-5 rounded-full font-black text-lg transition-all transform hover:scale-105 shadow-[0_20px_50px_rgba(220,38,38,0.3)] flex items-center gap-3 mx-auto"
+              className="bg-red-600 hover:bg-red-700 text-white px-12 py-5 rounded-full font-black text-lg transition-all transform hover:scale-105 shadow-[0_20px_50px_rgba(220,38,38,0.3)] flex items-center gap-3 max-[700px]:mx-auto cursor-pointer"
             >
               Support Our Mission <Heart fill="currentColor" size={20} />
             </button>
           </div>
-          {showModal && <DonationModal onClose={() => setShowModal(false)} />}
+          {isClient && showModal && (
+            <DonateModal onClose={() => setShowModal(false)} />
+          )}
         </div>
       </div>
 
       {/* Navigation Arrows */}
-      <div className="absolute bottom-12 right-[5%] z-3 flex gap-4">
+      <div className="absolute bottom-12 right-[5%] z-30 flex gap-4">
         <button
           onClick={prevSlide}
           className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:border-red-600 transition-all bg-black/40 backdrop-blur-md"
@@ -112,7 +120,7 @@ const Hero = () => {
       </div>
 
       {/* Indicators */}
-      <div className="absolute left-[5%] bottom-14 z-3 flex gap-2">
+      <div className="absolute left-[5%] bottom-14 z-30 flex gap-2">
         {bgImages.map((_, i) => (
           <div
             key={i}
