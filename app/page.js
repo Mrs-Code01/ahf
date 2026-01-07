@@ -67,7 +67,7 @@ const CharityLandingPage = () => {
                   Our Mission
                 </h4>
                 <p className="text-[1.6rem] text-[#000000] italic mt-2 max-[700px]:text-[1.4rem]">
-                  Sustainable growth for local communities.
+                  Restore hope to the impoverished, Prison inmates and..
                 </p>
               </div>
               <div className="w-[48%] border-l-4 border-[#E32227] pl-5">
@@ -75,7 +75,7 @@ const CharityLandingPage = () => {
                   Our Vision
                 </h4>
                 <p className="text-[1.6rem] text-[#000000] italic mt-2 max-[700px]:text-[1.4rem]">
-                  Empowering the youth for a better tomorrow.
+                  Improved well-being of Humanity amongst the Poor and...
                 </p>
               </div>
             </div>

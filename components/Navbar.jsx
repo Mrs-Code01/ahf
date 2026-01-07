@@ -110,7 +110,7 @@ export default function CharityLandingPage() {
   return (
     <div className="bg-white text-gray-900 overflow-x-hidden mt-[64px] min-[1100px]:pt-20">
       {/* --- NAVBAR SECTION --- */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md py-[30px]">
+      <header className="fixed top-0 left-0 right-0 z-[300px] border-b border-gray-100 bg-white/95 backdrop-blur-md py-[30px]">
         <nav ref={navRef} className="mx-auto" style={{ width: "90%" }}>
           <div className="flex items-center justify-between h-16 min-[1100px]:h-20">
             {/* Logo */}
