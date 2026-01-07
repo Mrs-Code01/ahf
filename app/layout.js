@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const catamaran = localFont({
-  src: "./fonts/Catamaran-Black.ttf",
+  src: "./fonts/OpenSans-ExtraBold.ttf",
   variable: "--catamaran-font", // Matches globals.css
   display: "swap"
 });

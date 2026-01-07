@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import DonationModal from "../../../../components/ModalPopUp/Donate";
-import VolunteerModal from "../../../../components/ModalPopUp/Volunteer";
-import { ArrowLeft, Heart, CheckCircle2, Award, FileText } from "lucide-react";
+import Support from "../../../../components/Support";
+import { ArrowLeft, CheckCircle2, Award, FileText } from "lucide-react";
 
 const FullProjectDetailsPage = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   // Brand Colors
   const colors = {
     primaryBlue: "text-[#1E40AF]",
@@ -197,7 +194,7 @@ const FullProjectDetailsPage = () => {
         >
           Detailed Project
         </span>
-        <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tighter mb-8">
+        <h1 className="text-6xl md:text-8xl font-black leading-[1.2] tracking-tighter mb-8">
           Orphans{" "}
           <span className={colors.primaryBlue}>And Vulnerable Children </span>
           (OVC) <span className={colors.accentRed}>Projects.</span>
@@ -305,44 +302,7 @@ const FullProjectDetailsPage = () => {
         ))}
       </main>
       {/* End Reports Content */}
-
-      {/* Shared Footer CTA - 90% */}
-      <footer className="w-[90%] mt-40 mb-20">
-        <div
-          className={`w-full ${colors.bgBlue} rounded-[50px] p-20 flex flex-col items-center text-center text-white relative overflow-hidden`}
-        >
-          {/* Background Red Accents */}
-          <div className="absolute top-[-50px] left-[-50px] w-64 h-64 bg-red-600 rounded-full blur-[100px] opacity-40"></div>
-
-          <Heart size={48} className="mb-8" fill="white" />
-          <h3 className="text-[3.5rem] text-[#ffffff] mb-6 max-w-[700px]">
-            Help us write more success stories.
-          </h3>
-          <p className="text-blue-100 text-[1.5rem] max-w-[600px] mb-12 font-medium opacity-80">
-            Your financial partnership allows us to expand these projects to
-            every state in the federation.
-          </p>
-
-          <div className="flex gap-6">
-            <button
-              className="bg-[#DC2626] text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-[1.3rem] hover:scale-105 transition-all shadow-xl cursor-pointer"
-              onClick={() => setShowModal(true)}
-            >
-              Donate to Reform
-            </button>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="bg-white text-[#1E40AF] px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-[1.3rem] hover:bg-slate-100 transition-all cursor-pointer"
-            >
-              Volunteer Today
-            </button>
-          </div>
-          {showModal && <DonationModal onClose={() => setShowModal(false)} />}
-          {isModalOpen && (
-            <VolunteerModal onClose={() => setIsModalOpen(false)} />
-          )}
-        </div>
-      </footer>
+      <Support />
       {/* End Footer */}
     </div>
   );
