@@ -18,7 +18,7 @@ const Projects = () => {
             />
           </div>
           {/* Left Content Side */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-[700px]:text-center">
             <span className="inline-block px-4 py-1.5 text-[#E32227] text-[1.3rem] font-bold uppercase">
               Featured Project
             </span>

@@ -49,17 +49,17 @@ const CharityLandingPage = () => {
             {/* Background decorative shape */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#4169e1] rounded-full opacity-5 -z-10 blur-3xl"></div>
           </div>
-          <div className="w-full lg:w-[48%] lg:pl-10">
+          <div className="w-full lg:w-[48%] lg:pl-10 max-[700px]:text-center">
             <span className="text-[#E32227] font-bold text-[1.4rem] uppercase tracking-widest">
-              Welcome to AHF
+              Who We Are
             </span>
             <h2 className="text-[4rem] mt-5 mb-8 leading-[1.2] max-[700px]:text-[3rem]">
-              You’re the Hope of Others.
+              Welcome to AHF
             </h2>
             <p className="text-gray-500 text-[1.8rem] mb-10 max-[700px]:text-[1.5rem]">
-              Join us in our journey to make a difference. We provide support
-              for children and families facing hardship. Every donation
-              contributes to education, water, and health.
+              ApiriHallowed Foundation was established on June 3rd 2007,
+              inspired by the word of God in Matthew 25: 31  46. It was founded
+              by Mr. Apiriala Atedoghu, who is...
             </p>
             <div className="flex flex-row justify-between mb-10">
               <div className="w-[48%] border-l-4 border-[#4169e1] pl-5">
@@ -95,7 +95,7 @@ const CharityLandingPage = () => {
       {/* END CORE MANDATES */}
       <section className="w-[90%] my-[100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-y-[70px]">
         {/* Left Content Side */}
-        <div className="w-full lg:w-[50%] flex flex-col">
+        <div className="w-full lg:w-[50%] flex flex-col max-[700px]:text-center">
           <h2 className="text-[3.5rem] md:text-[4rem] leading-[1.2] text-gray-900 max-[700px]:text-[3rem]">
             Start <span className="text-[#E32227]">Learning </span>A Skill From
             Experts
