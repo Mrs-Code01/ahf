@@ -167,22 +167,22 @@ export default function VolunteerPage() {
             {[
               {
                 id: 1,
-                url: "/images/volunteer/ahfnig4.jpg",
+                url: "/images/volunteer/ahfnig4.JPG",
                 alt: "Students collaborating"
               },
               {
                 id: 2,
-                url: "/images/volunteer/ahfnig1.jpg",
+                url: "/images/volunteer/ahfnig1.JPG",
                 alt: "Team meeting"
               },
               {
                 id: 3,
-                url: "/images/volunteer/ahfnig2.jpg",
+                url: "/images/volunteer/ahfnig2.JPG",
                 alt: "Group high five"
               },
               {
                 id: 4,
-                url: "/images/volunteer/ahfnig3.jpg",
+                url: "/images/volunteer/ahfnig3.JPG",
                 alt: "Friends outdoors"
               },
               {
@@ -192,7 +192,7 @@ export default function VolunteerPage() {
               },
               {
                 id: 6,
-                url: "/images/volunteer/ahfnig6.jpg",
+                url: "/images/volunteer/ahfnig6.JPG",
                 alt: "Hands joined in unity"
               }
             ].map(activity => (
