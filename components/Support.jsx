@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import DonationModal from "../components/ModalPopUp/Donate";
-import VolunteerModal from "../components/ModalPopUp/Volunteer";
 import { Heart } from "lucide-react";
+import Link from "next/link";
 
 const Volunteer = () => {
   const [showModal, setShowModal] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const colors = {
     primaryBlue: "text-[#1E40AF]",
     bgBlue: "bg-[#4169e1]",
@@ -41,17 +41,14 @@ const Volunteer = () => {
             >
               Donate to Reform
             </button>
-            <button
-              onClick={() => setIsModalOpen(true)}
+            <Link
+              href="/get-involved/volunteer"
               className="bg-white text-[#1E40AF] px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-[1.3rem] hover:bg-slate-100 transition-all cursor-pointer max-[470px]:w-[100%]"
             >
               Volunteer Today
-            </button>
+            </Link>
           </div>
           {showModal && <DonationModal onClose={() => setShowModal(false)} />}
-          {isModalOpen && (
-            <VolunteerModal onClose={() => setIsModalOpen(false)} />
-          )}
         </div>
       </footer>
     </div>

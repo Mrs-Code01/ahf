@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
 import DonateModal from "../../../components/ModalPopUp/Donate";
 
 const bgImages = [
-  "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000",
+  "/images/ahfnig1.jpg",
   "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=2000"

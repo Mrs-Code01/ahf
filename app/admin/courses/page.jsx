@@ -217,6 +217,13 @@ export default function AdminCoursesPage() {
                 Add Course
               </button>
               <button
+                onClick={() => router.push("/admin/volunteers")}
+                className="bg-purple-600 text-white px-5 py-2.5 rounded-lg hover:bg-purple-700 transition-all font-semibold flex items-center gap-2 shadow-md"
+              >
+                <Users size={20} />
+                Volunteers
+              </button>
+              <button
                 onClick={handleLogout}
                 className="bg-red-600 text-white px-5 py-2.5 rounded-lg hover:bg-red-700 transition-all font-semibold flex items-center gap-2 shadow-md"
               >

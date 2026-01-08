@@ -45,7 +45,15 @@ const navItems = [
   },
   { label: "Projects", href: "/projects" },
   { label: "Media", href: "/media" },
-  { label: "Courses", href: "/courses/start-course" }
+  { label: "Courses", href: "/courses/start-course" },
+  {
+    label: "Get Involved",
+    href: "#",
+    dropdown: [
+      { label: "Volunteer", href: "/get-involved/volunteer" },
+      { label: "Contact Us", href: "/get-involved/contact-us" }
+    ]
+  }
 ];
 
 export default function CharityLandingPage() {

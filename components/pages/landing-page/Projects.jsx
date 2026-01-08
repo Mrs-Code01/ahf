@@ -12,7 +12,7 @@ const Projects = () => {
             {/* Using a placeholder gradient to mimic the design's image style */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#E65F3E]/80 to-[#A3543D]"></div>
             <img
-              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1000"
+              src="/images/ahfnig1.jpg"
               alt="Community Outreach"
               className="w-full h-full object-cover mix-blend-overlay opacity-90"
             />
