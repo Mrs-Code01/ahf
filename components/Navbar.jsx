@@ -53,7 +53,6 @@ const navItems = [
     ],
   },
   { label: "Projects", href: "/projects" },
-  { label: "Media", href: "/media" },
   { label: "Courses", href: "/courses/start-course" },
   {
     label: "Get Involved",
@@ -61,7 +60,10 @@ const navItems = [
     dropdown: [
       { label: "Volunteer", href: "/get-involved/volunteer" },
       { label: "Contact Us", href: "/get-involved/contact-us" },
-      { label: "Partners/Affiliates", href: "/get-involved/partners-and-affiliates" },
+      {
+        label: "Partners/Affiliates",
+        href: "/get-involved/partners-and-affiliates",
+      },
     ],
   },
 ];
@@ -261,76 +263,78 @@ export default function CharityLandingPage() {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div className="text-[1.3rem] min-[1100px]:hidden pb-6 border-t border-gray-50 mt-[35px]">
-              {navItems.filter((item) => item.label !== "Media").map((item) => {
-                const parentActive = isParentActive(item);
-                return (
-                  <div key={item.label} className="py-[5px]">
-                    {item.dropdown ? (
-                      <>
-                        <button
-                          onClick={() => toggleDropdown(item.label)}
-                          className={`flex items-center justify-between w-full px-4 py-3 font-bold text-[1.3rem] ${
-                            parentActive ? "text-[#E32227]" : "text-gray-700 "
+              {navItems
+                .filter((item) => item.label !== "Media")
+                .map((item) => {
+                  const parentActive = isParentActive(item);
+                  return (
+                    <div key={item.label} className="py-[5px]">
+                      {item.dropdown ? (
+                        <>
+                          <button
+                            onClick={() => toggleDropdown(item.label)}
+                            className={`flex items-center justify-between w-full px-4 py-3 font-bold text-[1.3rem] ${
+                              parentActive ? "text-[#E32227]" : "text-gray-700 "
+                            }`}
+                          >
+                            {item.label} <ChevronDown size={16} />
+                          </button>
+                          {openDropdown === item.label && (
+                            <div className="bg-gray-50 rounded-xl mx-2">
+                              {item.dropdown.map((d) => (
+                                <Link
+                                  key={d.label}
+                                  href={d.href}
+                                  className={`block px-8 py-3 text-[1.3rem] font-bold rounded-lg ${
+                                    isActive(d.href)
+                                      ? "text-[#E32227] bg-red-50"
+                                      : "text-gray-600"
+                                  }`}
+                                  onClick={() => {
+                                    setIsMobileMenuOpen(false);
+                                    setOpenDropdown(null);
+                                  }}
+                                >
+                                  {d.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </>
+                      ) : item.href.startsWith("#") ? (
+                        <a
+                          href={item.href}
+                          className={` block px-4 py-3 font-bold rounded-lg ${
+                            isActive(item.href)
+                              ? "text-[#E32227] bg-red-50"
+                              : "text-gray-700"
                           }`}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
                         >
-                          {item.label} <ChevronDown size={16} />
-                        </button>
-                        {openDropdown === item.label && (
-                          <div className="bg-gray-50 rounded-xl mx-2">
-                            {item.dropdown.map((d) => (
-                              <Link
-                                key={d.label}
-                                href={d.href}
-                                className={`block px-8 py-3 text-[1.3rem] font-bold rounded-lg ${
-                                  isActive(d.href)
-                                    ? "text-[#E32227] bg-red-50"
-                                    : "text-gray-600"
-                                }`}
-                                onClick={() => {
-                                  setIsMobileMenuOpen(false);
-                                  setOpenDropdown(null);
-                                }}
-                              >
-                                {d.label}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </>
-                    ) : item.href.startsWith("#") ? (
-                      <a
-                        href={item.href}
-                        className={` block px-4 py-3 font-bold rounded-lg ${
-                          isActive(item.href)
-                            ? "text-[#E32227] bg-red-50"
-                            : "text-gray-700"
-                        }`}
-                        onClick={() => {
-                          setIsMobileMenuOpen(false);
-                          setOpenDropdown(null);
-                        }}
-                      >
-                        {item.label}
-                      </a>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className={`block px-4 py-3 font-bold rounded-lg ${
-                          isActive(item.href)
-                            ? "text-[#E32227] bg-red-50"
-                            : "text-gray-700"
-                        }`}
-                        onClick={() => {
-                          setIsMobileMenuOpen(false);
-                          setOpenDropdown(null);
-                        }}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                  </div>
-                );
-              })}
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className={`block px-4 py-3 font-bold rounded-lg ${
+                            isActive(item.href)
+                              ? "text-[#E32227] bg-red-50"
+                              : "text-gray-700"
+                          }`}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  );
+                })}
               <div className="px-4 mt-4">
                 <button
                   className="block w-full bg-[#E32227] text-white text-center py-4 rounded-xl font-bold"
