@@ -16,19 +16,32 @@ const courseData = [
   },
 ];
 
+// Preview window: 9:00 – 10:00
+const PREVIEW_START = 540;
+const PREVIEW_END = 600;
+
 const FeaturedCourses = () => {
   const [lockedCourses, setLockedCourses] = useState({});
   const videoRefs = useRef({});
 
+  // Jump to the 9-minute mark as soon as metadata is ready
+  const handleLoadedMetadata = (e) => {
+    e.currentTarget.currentTime = PREVIEW_START;
+  };
+
   const handleTimeUpdate = (e, courseId) => {
-    const video = e.currentTarget; // The native <video> element
+    const video = e.currentTarget;
     const currentTime = video.currentTime;
 
-    // Hard stop at 60 seconds
-    if (currentTime >= 60) {
+    // Prevent scrubbing before the preview window
+    if (currentTime < PREVIEW_START) {
+      video.currentTime = PREVIEW_START;
+    }
+
+    // Hard stop at 10 minutes
+    if (currentTime >= PREVIEW_END) {
       video.pause();
-      // Ensure it stays at 60s
-      video.currentTime = 60;
+      video.currentTime = PREVIEW_END;
       setLockedCourses((prev) => ({ ...prev, [courseId]: true }));
 
       if (document.fullscreenElement) {
@@ -104,9 +117,27 @@ const FeaturedCourses = () => {
                 src={course.videoUrl}
                 controls
                 className="w-full h-full object-cover"
+                onLoadedMetadata={handleLoadedMetadata}
                 onTimeUpdate={(e) => handleTimeUpdate(e, course.id)}
-                controlsList="nodownload" // Basic download protection
-                onContextMenu={(e) => e.preventDefault()} // Disable right-click save
+                controlsList="nodownload"
+                onContextMenu={(e) => e.preventDefault()}
+              />
+
+              {/* BLUR OVERLAY — clean blur over ingredient text, fades in from left */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  width: "62%",
+                  height: "90%",
+                  backdropFilter: "blur(16px)",
+                  WebkitBackdropFilter: "blur(16px)",
+                  maskImage: "linear-gradient(to right, transparent 0%, black 18%)",
+                  WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 18%)",
+                  zIndex: 10,
+                  pointerEvents: "none",
+                }}
               />
             </div>
 
